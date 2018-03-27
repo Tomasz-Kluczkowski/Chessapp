@@ -1,23 +1,12 @@
 board = [[1] * 8 for i in range(8)]
 
-column_conversion = {
-   "a" : 0,
-   "b" : 1,
-   "c" : 2,
-   "d" : 3,
-   "e" : 4,
-   "f" : 5,
-   "g" : 6,
-   "h" : 7
-}
-
 def knight_moves(position, board):
     """This function shows all possible knight moves - assuming nothing else
     is on the board"""
 
     column, row = position
     row = int(row) - 1
-    column = column_conversion[column]
+    column = ord(column) - ord('a')
     i, j = row, column
     possible_moves = []
 
